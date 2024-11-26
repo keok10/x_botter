@@ -1189,6 +1189,7 @@ async def main(api_client, account_id, model_path):
 if __name__ == "__main__":
     nest_asyncio.apply()
     
+
 # JSONファイルを読み込む
 with open('config.json', 'r') as f:
     config = json.load(f)
@@ -1201,5 +1202,6 @@ model_path = '06_2_20090104-20240704_3m.joblib'  # モデルのパスを指定
 # APIクライアントの初期化
 api_client = API(access_token=access_token, environment=environment)
 
-    # asyncio.runでmain関数を呼び出し、必要な引数を渡す
-    asyncio.run(main(api_client, account_id, model_path))
+# asyncio.runでmain関数を呼び出し、必要な引数を渡す
+asyncio.run(main(api_client, account_id, model_path))
+
